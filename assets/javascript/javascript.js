@@ -29,7 +29,7 @@ $("#add-animal").on("click", function(event) {
 $("#buttons-view").on("click", ".animal", function(event) {
 
     var animal = $(this).attr("data-name")
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=TFzw5L644qlyOX4bwrNLcR7EjhSu83F0&limit=5"
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=TFzw5L644qlyOX4bwrNLcR7EjhSu83F0&limit=10"
 
     $.ajax({
         url: queryURL,
@@ -44,10 +44,15 @@ $("#buttons-view").on("click", ".animal", function(event) {
 
             var element = `<img src= ${giphys[i].images.fixed_height.url} data-still= ${giphys[i].images.fixed_height_still.url} data-animate= ${giphys[i].images.fixed_height.url} data-state= "animate" class= "gifs">`
 
+            var elementRating = "<p>" + giphys[i].rating + "</p>"
+
+
+            $("#newGifs").append(elementRating);
+            console.log(elementRating);
             $("#newGifs").append(element);
         }
     })
-
+            $("#newGifs").empty();
 })
 
 $("#newGifs").on("click", ".gifs", function(event) {
