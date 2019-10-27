@@ -6,31 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Animals</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" type="stylesheet/css" href="assets/images/pumpkins.jpg">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" type="stylesheet/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Oxygen|Red+Hat+Display&display=swap" rel="stylesheet">
+
 </head>
 <body>        
     
-    <div class="container1">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Animals!</h1>
-              <p class="lead">Click on the animals to display some fun giphs.</p>
-            </div>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid col-sm-12">
+        <div class="container col-sm-12">
+          <h1 class="display-4">Animals!</h1>
+          <p class="lead">Click on the animals to display some fun giphs.</p>
         </div>
-      
-          <div id="buttons-view"></div>
-      
-          <form id="animal-form">
-            <label for="animal-input"></label>
-            <input type="text" id="animal-input"><br>
-      
-            <input id="add-animal" type="submit" value="Add an Animal">
-          </form>
-
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-12" id="buttons-view"></div>
     </div>
 
-    <div id= "newGifs"></div>
+    <div class="row">
+      <div class="col-sm-12"></div>
+    </div>
+
+      <form id="animal-form">
+        <div class="row">
+
+          <label for="animal-input"></label>
+          <input class="col-sm-12" type="text" id="animal-input"><br>
+          <input class="col-sm-12" id="add-animal" type="submit" value="Add an Animal">
+          
+        </div>
+      </form>
+    <div class="col-sm-12"></div>
+
+    <div class="row">
+      <div class="col-sm-12"></div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-12" id= "newGifs"></div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/javascript/javascript.js"></script>

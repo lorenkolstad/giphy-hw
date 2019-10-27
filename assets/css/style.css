@@ -1,8 +1,9 @@
-. {
+
+.container1 {
     text-align: center;
-
-}
-
-body {
-    background-image: url("assets/images/pumpkins.jpg")
+    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    background: black;
+    font: orange;
 }

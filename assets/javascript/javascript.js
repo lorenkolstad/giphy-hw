@@ -8,9 +8,10 @@ function renderButtons() {
         var x = $("<button>");
 
         x.addClass("animal");
+        x.addClass("btn-outline-secondary");
         x.attr("data-name", animals[i]);
         x.text(animals[i]);
-
+        
         $("#buttons-view").append(x);
     }
 }
