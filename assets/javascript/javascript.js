@@ -1,11 +1,11 @@
-var animals = ["cat", "dog", "fish"];
+let animals = ["cat", "dog", "fish"];
 
 function renderButtons() {
 
     $("#buttons-view").empty();
 
-    for (var i = 0; i < animals.length; i++) {
-        var x = $("<button>");
+    for (let i = 0; i < animals.length; i++) {
+        let x = $("<button>");
 
         x.addClass("animal");
         x.addClass("btn-outline-secondary");
@@ -19,7 +19,7 @@ function renderButtons() {
 $("#add-animal").on("click", function(event) {
     event.preventDefault();
 
-    var animal = $("#animal-input").val().trim();
+    let animal = $("#animal-input").val().trim();
 
     animals.push(animal);
 
@@ -29,8 +29,8 @@ $("#add-animal").on("click", function(event) {
 
 $("#buttons-view").on("click", ".animal", function(event) {
 
-    var animal = $(this).attr("data-name")
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=TFzw5L644qlyOX4bwrNLcR7EjhSu83F0&limit=10"
+    let animal = $(this).attr("data-name")
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=TFzw5L644qlyOX4bwrNLcR7EjhSu83F0&limit=10"
 
     $.ajax({
         url: queryURL,
@@ -40,12 +40,12 @@ $("#buttons-view").on("click", ".animal", function(event) {
         console.log(response.data);
         console.log(queryURL);
 
-        var giphys = response.data
+        let giphys = response.data
         for (let i = 0; i < giphys.length; i++) {
 
-            var element = `<img src= ${giphys[i].images.fixed_height.url} data-still= ${giphys[i].images.fixed_height_still.url} data-animate= ${giphys[i].images.fixed_height.url} data-state= "animate" class= "gifs">`
+            let element = `<img src= ${giphys[i].images.fixed_height.url} data-still= ${giphys[i].images.fixed_height_still.url} data-animate= ${giphys[i].images.fixed_height.url} data-state= "animate" class= "gifs">`
 
-            var elementRating = "<p>" + giphys[i].rating + "</p>"
+            let elementRating = "<p>" + giphys[i].rating + "</p>"
 
 
             $("#newGifs").append(elementRating);
@@ -58,7 +58,7 @@ $("#buttons-view").on("click", ".animal", function(event) {
 
 $("#newGifs").on("click", ".gifs", function(event) {
 
-    var state = $(this).attr("data-state")
+    let state = $(this).attr("data-state")
     
     if (state === "animate") {
         $(this).attr("data-state", "still");
